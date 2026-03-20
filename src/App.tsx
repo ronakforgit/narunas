@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index.tsx";
 import Products from "./pages/Products.tsx";
+import Predictions from "./pages/Predictions.tsx";
+import PredictionReport from "./pages/PredictionReport.tsx";
 import Signal from "./pages/Signal.tsx";
 import Civitas from "./pages/Civitas.tsx";
 import Mandate from "./pages/Mandate.tsx";
