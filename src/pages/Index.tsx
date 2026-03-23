@@ -53,10 +53,10 @@ const modules = [
 
 const steps = [
   { num: "01", title: "Seed", desc: "Upload any document: a policy draft, product brief, financial report, or news article." },
-  { num: "02", title: "Map", desc: "Presage extracts a knowledge graph of entities, relationships, and tensions from your material." },
-  { num: "03", title: "Spawn", desc: "Thousands of AI agents are generated — each with a unique personality, memory, and behavioral logic." },
-  { num: "04", title: "Simulate", desc: "Agents interact freely across a simulated environment. Opinions form, shift, and cascade." },
-  { num: "05", title: "Report", desc: "A structured prediction report is generated: opinion clusters, turning points, likely outcomes." },
+  { num: "02", title: "Map", desc: "Narunas extracts a knowledge graph of entities, relationships, and context from your material." },
+  { num: "03", title: "Spawn", desc: "Thousands of AI agents are generated, each with a unique personality, memory, and behavioral logic." },
+  { num: "04", title: "Simulate", desc: "Agents interact freely across a simulated environment. Opinions form, shift, and spread." },
+  { num: "05", title: "Report", desc: "A structured prediction report is generated covering opinion clusters, turning points, and likely outcomes." },
 ];
 
 const Index = () => {
@@ -77,20 +77,20 @@ const Index = () => {
           Before you make it.
         </h1>
         <p className="fade-in-up mt-6 max-w-2xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
-          Presage runs population-scale AI simulations to predict how markets, citizens, and electorates respond to any event — before it happens.
+          Narunas builds digital populations to predict how markets, citizens, and electorates respond to any event before it happens.
         </p>
         <div className="fade-in-up mt-10 flex flex-wrap items-center justify-center gap-4" style={{ transitionDelay: "0.2s" }}>
           <Link
             to="/contact"
             className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Request a Demo
+            Request a demo
           </Link>
           <a
             href="#how-it-works"
             className="rounded-md border border-foreground/30 px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/60"
           >
-            See How It Works
+            See how it works
           </a>
         </div>
 
@@ -98,8 +98,8 @@ const Index = () => {
         <div className="fade-in-up mt-16 flex flex-col items-center gap-6 border border-border rounded-lg px-8 py-6 sm:flex-row sm:gap-0 sm:divide-x sm:divide-border" style={{ transitionDelay: "0.3s" }}>
           {[
             { num: "1,000,000+", label: "Agents per simulation" },
-            { num: "3", label: "Domains: Commercial · Government · Political" },
-            { num: "10×", label: "Faster than traditional research" },
+            { num: "3", label: "Products: Signal, Civitas, Mandate" },
+            { num: "10x", label: "Faster than traditional research" },
           ].map((stat) => (
             <div key={stat.label} className="px-8 text-center">
               <div className="font-serif text-2xl text-foreground">{stat.num}</div>
@@ -118,15 +118,15 @@ const Index = () => {
           {[
             {
               title: "Surveys lie.",
-              body: "Humans are unreliable narrators of their own behavior. Memory fails. Social pressure distorts answers. You're measuring what people say, not what they do.",
+              body: "People are unreliable narrators of their own behavior. Memory fails, incentives distort answers, and social pressure changes what people say versus what they actually do.",
             },
             {
               title: "Inaccessible.",
-              body: "The populations that matter most — policymakers, high-net-worth households, swing voters — are the ones you can never reach at scale.",
+              body: "The populations that matter most are the ones you can never reach at scale. Policymakers, high-net-worth households, rural voters. They shape outcomes but rarely show up in research.",
             },
             {
               title: "No future.",
-              body: "You can't survey a decision that hasn't happened yet. New products, new policies, new campaigns — traditional research has no answer.",
+              body: "You cannot survey a decision that has not happened yet. New products, new policies, new campaigns all involve conditions that do not exist yet, which makes traditional research useless for the decisions that matter most.",
             },
           ].map((item, i) => (
             <div key={item.title} className="fade-in-up border-t border-border pt-6" style={{ transitionDelay: `${i * 0.1}s` }}>
@@ -154,20 +154,20 @@ const Index = () => {
             </div>
           ))}
         </div>
-        <div className="fade-in-up mt-12 rounded-lg border border-primary/30 bg-primary/5 px-8 py-6" style={{ transitionDelay: "0.4s" }}>
+        <div className="fade-in-up mt-12 border-l-2 border-l-primary bg-primary/5 px-8 py-6" style={{ transitionDelay: "0.4s" }}>
           <p className="text-sm text-foreground/90">
-            You can inject new variables at any point — drop in a new policy change, a competitor move, a breaking headline — and watch group reactions evolve in real time.
+            You can introduce new variables at any point during a simulation. A policy reversal, a competitor announcement, a breaking headline. Watch how the population responds in real time.
           </p>
         </div>
       </section>
 
-      {/* Modules */}
+      {/* Products */}
       <section ref={modulesRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <span className="fade-in-up font-sans text-xs font-medium uppercase tracking-wider text-primary">
           PRODUCTS
         </span>
         <h2 className="fade-in-up mt-4 font-serif text-3xl text-foreground sm:text-4xl">
-          One platform. Three domains.
+          Three products. Each built for a different domain.
         </h2>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {modules.map((mod, i) => (
@@ -182,13 +182,13 @@ const Index = () => {
       <section ref={proofRef} className="border-y border-border py-24">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
           <blockquote className="fade-in-up font-serif text-2xl leading-relaxed text-foreground sm:text-3xl">
-            "In an independent validation study, our simulation recreated a six-month primary research report overnight — and where results diverged, the simulation was more accurate."
+            "In an independent validation study, our simulation recreated a six-month primary research report overnight. Where results diverged, the simulation was more accurate."
           </blockquote>
           <p className="fade-in-up mt-6 text-sm text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
             Validated against real-world research outcomes across commercial, policy, and electoral domains.
           </p>
           <a href="#" className="fade-in-up mt-4 inline-block text-sm font-medium text-primary hover:text-primary/80" style={{ transitionDelay: "0.2s" }}>
-            Read the methodology →
+            Read the methodology
           </a>
         </div>
       </section>
@@ -201,12 +201,10 @@ const Index = () => {
               AGENT INTERVIEW
             </span>
             <h2 className="fade-in-up mt-4 font-serif text-3xl text-foreground sm:text-4xl">
-              Don't just read the report.
-              <br />
               Talk to the simulation.
             </h2>
             <p className="fade-in-up mt-6 text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
-              After every simulation, every agent remains available for direct conversation. Ask them why they reacted the way they did. Their answers are grounded in their full simulated experience — memories, interactions, and all.
+              After every simulation, every agent stays available for direct conversation. Ask them why they reacted the way they did. Their answers are grounded in their full simulated experience, including memories, interactions, and context.
             </p>
           </div>
 
@@ -226,7 +224,7 @@ const Index = () => {
               <div>
                 <span className="text-muted-foreground">Sarah, 44, suburban voter:</span>
                 <p className="mt-1 text-foreground/80">
-                  "Honestly, after seeing the coverage last week and talking with a few people in my network, I don't trust that it's been thought through. The rollout feels rushed."
+                  "After seeing the coverage last week and talking with a few people in my network, I do not trust that this has been thought through properly. The rollout feels rushed and nobody has explained the long-term cost."
                 </p>
               </div>
             </div>

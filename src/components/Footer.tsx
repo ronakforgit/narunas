@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="grid gap-12 md:grid-cols-3">
           {/* Col 1 */}
           <div>
-            <span className="font-serif text-lg tracking-[0.2em] text-foreground">PRESAGE</span>
+            <span className="font-serif text-lg tracking-[0.2em] text-foreground">NARUNAS</span>
             <p className="mt-3 text-sm text-muted-foreground">
-              Rethinking the science of prediction.
+              Predicting behavior before it happens.
             </p>
           </div>
 
@@ -24,10 +24,10 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               {[
                 { label: "Products", href: "/products" },
-                { label: "Predictions", href: "/predictions" },
                 { label: "Signal", href: "/products/signal" },
                 { label: "Civitas", href: "/products/civitas" },
                 { label: "Mandate", href: "/products/mandate" },
+                { label: "Predictions", href: "/predictions" },
                 { label: "About", href: "/about" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row">
-          <span>© 2026 Presage. All rights reserved.</span>
+          <span>2026 Narunas. All rights reserved.</span>
           <div className="flex gap-4">
             <span className="cursor-pointer hover:text-foreground">Privacy Policy</span>
             <span className="cursor-pointer hover:text-foreground">Terms</span>

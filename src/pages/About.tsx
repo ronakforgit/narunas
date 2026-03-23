@@ -18,10 +18,10 @@ const About = () => {
       {/* Hero */}
       <section ref={heroRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <h1 className="fade-in-up font-serif text-4xl text-foreground sm:text-5xl">
-          We're rethinking the science of prediction.
+          We are rethinking the science of prediction.
         </h1>
         <p className="fade-in-up mt-6 max-w-3xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
-          Presage was built on a simple premise: the most important decisions are the ones traditional research can't answer.
+          Narunas was built on a simple premise. The most important decisions are exactly the ones that traditional research cannot answer.
         </p>
       </section>
 
@@ -29,10 +29,10 @@ const About = () => {
       <section ref={missionRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2">
           <h2 className="fade-in-up font-serif text-3xl text-foreground leading-snug">
-            We believe that simulating the future is more honest than surveying it.
+            Simulating the future is more honest than surveying it.
           </h2>
           <p className="fade-in-up text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
-            Surveys measure what people say. Presage measures what populations do — by building them, giving them memories, and watching them react. The result is a research methodology that doesn't require respondents, doesn't introduce interviewer bias, and can represent populations that have never been accessible to traditional research.
+            Surveys measure what people say. Narunas measures what populations do by building them, giving them memories, and watching them react to a scenario. The result is a research approach that does not require respondents, does not introduce interviewer bias, and can represent populations that have never been accessible to conventional research.
           </p>
         </div>
       </section>
@@ -42,16 +42,16 @@ const About = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
-              title: "Open architecture",
-              body: "Built on peer-reviewed simulation infrastructure, not proprietary black boxes.",
+              title: "Open to scrutiny",
+              body: "We publish our predictions before outcomes are known and update them publicly after. No hiding behind reports that only circulate internally.",
+            },
+            {
+              title: "Built for operators",
+              body: "Our output is structured for the person making the decision, not the researcher presenting findings. You get a recommendation you can act on.",
             },
             {
               title: "Population fidelity",
-              body: "Every agent is grounded in real demographic data and behavioral research.",
-            },
-            {
-              title: "Decision-ready output",
-              body: "Reports are structured for operators, not researchers. You get a recommendation, not a dataset.",
+              body: "Every agent is grounded in real demographic data and behavioral research. The simulation is only as good as the people inside it.",
             },
           ].map((item, i) => (
             <div key={item.title} className="fade-in-up border-t border-border pt-6" style={{ transitionDelay: `${i * 0.1}s` }}>
@@ -78,10 +78,10 @@ const About = () => {
         {/* Careers */}
         <div className="fade-in-up mt-24 border-t border-border pt-12" style={{ transitionDelay: "0.3s" }}>
           <p className="max-w-2xl text-muted-foreground">
-            We're a small team working at the frontier of multi-agent simulation and applied AI.
+            We are a small team working at the frontier of multi-agent simulation and applied AI.
           </p>
           <a href="#" className="mt-4 inline-block text-sm font-medium text-primary hover:text-primary/80">
-            See open roles →
+            See open roles
           </a>
         </div>
       </section>

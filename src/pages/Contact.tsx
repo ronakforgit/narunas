@@ -21,7 +21,7 @@ const Contact = () => {
     if (!form.email.trim()) e.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
     if (!form.organization.trim()) e.organization = "Organization is required";
-    if (!form.decision.trim()) e.decision = "Please describe the decision";
+    if (!form.module) e.module = "Please select a product";
     return e;
   };
 
@@ -56,10 +56,10 @@ const Contact = () => {
           <div className="fade-in-up lg:col-span-1">
             <h1 className="font-serif text-4xl text-foreground">Request a demo.</h1>
             <p className="mt-4 text-muted-foreground">
-              Tell us about your decision. We'll show you how Presage simulates it.
+              Tell us about the decision you need to make. We will show you how Narunas simulates it.
             </p>
             <div className="mt-12 space-y-4 text-sm text-muted-foreground">
-              <p>Responses within 1 business day.</p>
+              <p>We respond within one business day.</p>
               <p>No commitment required.</p>
               <p>Available for enterprise, government, and campaign contracts.</p>
             </div>
@@ -70,7 +70,7 @@ const Contact = () => {
             {submitted ? (
               <div className="rounded-lg border border-primary/30 bg-primary/5 px-8 py-12 text-center">
                 <h2 className="font-serif text-2xl text-foreground">Thank you.</h2>
-                <p className="mt-4 text-muted-foreground">We'll be in touch within one business day.</p>
+                <p className="mt-4 text-muted-foreground">We will be in touch within one business day.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -93,30 +93,30 @@ const Contact = () => {
                     {errors.organization && <p className="mt-1 text-xs text-destructive">{errors.organization}</p>}
                   </div>
                   <div>
-                    <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Role / Title</label>
+                    <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Role and title</label>
                     <input className={inputClass} value={form.role} onChange={(e) => update("role", e.target.value)} placeholder="VP Strategy" />
                   </div>
                 </div>
                 <div>
-                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Which module are you interested in?</label>
+                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Which product are you interested in?</label>
                   <select className={inputClass} value={form.module} onChange={(e) => update("module", e.target.value)}>
-                    <option value="">Select a module</option>
+                    <option value="">Select a product</option>
                     <option value="signal">Signal</option>
                     <option value="civitas">Civitas</option>
                     <option value="mandate">Mandate</option>
                     <option value="all">All three</option>
                   </select>
+                  {errors.module && <p className="mt-1 text-xs text-destructive">{errors.module}</p>}
                 </div>
                 <div>
-                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Describe the decision you're trying to inform</label>
-                  <textarea className={`${inputClass} min-h-[120px]`} value={form.decision} onChange={(e) => update("decision", e.target.value)} placeholder="We're evaluating a pricing change across our enterprise tier and need to understand likely churn impact..." />
-                  {errors.decision && <p className="mt-1 text-xs text-destructive">{errors.decision}</p>}
+                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Describe the decision you are trying to inform</label>
+                  <textarea className={`${inputClass} min-h-[120px]`} value={form.decision} onChange={(e) => update("decision", e.target.value)} placeholder="We are evaluating a pricing change across our enterprise tier and need to understand likely churn impact..." />
                 </div>
                 <button
                   type="submit"
                   className="w-full rounded-md bg-primary py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                 >
-                  Request a Demo
+                  Request a demo
                 </button>
               </form>
             )}

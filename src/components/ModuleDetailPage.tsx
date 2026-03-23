@@ -35,7 +35,7 @@ const ModuleDetailPage = ({ label, headline, description, capabilities, steps, q
           className="fade-in-up mt-8 inline-block rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           style={{ transitionDelay: "0.2s" }}
         >
-          Request a Demo
+          Request a demo
         </Link>
       </section>
 
@@ -67,12 +67,12 @@ const ModuleDetailPage = ({ label, headline, description, capabilities, steps, q
 
       {/* Questions */}
       <section ref={qRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <h2 className="fade-in-up font-serif text-3xl text-foreground">Questions this module can answer</h2>
+        <h2 className="fade-in-up font-serif text-3xl text-foreground">Questions this product can answer</h2>
         <div className="mt-12 space-y-4">
           {questions.map((q, i) => (
             <div
               key={i}
-              className="fade-in-up rounded-lg border border-border bg-card px-6 py-4 border-l-2 border-l-primary"
+              className="fade-in-up border-l-2 border-l-primary border border-border bg-card px-6 py-4 rounded-lg"
               style={{ transitionDelay: `${i * 0.05}s` }}
             >
               <p className="text-sm text-foreground/90">"{q}"</p>
