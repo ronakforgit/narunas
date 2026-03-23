@@ -1,8 +1,5 @@
 import Layout from "@/components/Layout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-
-import Layout from "@/components/Layout";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import founderCeo from "@/assets/founder-ceo.png";
 import founderCto from "@/assets/founder-cto.png";
 
