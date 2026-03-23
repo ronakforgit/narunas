@@ -66,10 +66,12 @@ const About = () => {
       {/* Team */}
       <section ref={teamRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <h2 className="fade-in-up font-serif text-3xl text-foreground">Team</h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {teamPlaceholders.map((member, i) => (
+        <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-2xl">
+          {teamMembers.map((member, i) => (
             <div key={i} className="fade-in-up" style={{ transitionDelay: `${i * 0.1}s` }}>
-              <div className="aspect-square rounded-lg bg-card border border-border" />
+              <div className="aspect-square rounded-lg overflow-hidden border border-border">
+                <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
+              </div>
               <h3 className="mt-4 font-sans text-sm font-semibold text-foreground">{member.name}</h3>
               <p className="text-sm text-muted-foreground">{member.title}</p>
             </div>
