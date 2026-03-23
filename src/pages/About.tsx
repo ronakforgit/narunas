@@ -1,10 +1,14 @@
 import Layout from "@/components/Layout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const teamPlaceholders = [
-  { name: "Name", title: "Co-founder & CEO" },
-  { name: "Name", title: "Co-founder & CTO" },
-  { name: "Name", title: "Head of Research" },
+import Layout from "@/components/Layout";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import founderCeo from "@/assets/founder-ceo.png";
+import founderCto from "@/assets/founder-cto.png";
+
+const teamMembers = [
+  { name: "Name", title: "Co-founder & CEO", photo: founderCeo },
+  { name: "Name", title: "Co-founder & CTO", photo: founderCto },
 ];
 
 const About = () => {
