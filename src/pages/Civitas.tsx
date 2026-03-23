@@ -6,23 +6,23 @@ const Civitas = () => (
     headline="Design policy outcomes before anything goes live."
     description="Simulate how citizens, institutions, and stakeholders respond to policy initiatives, crisis events, or public communications. Civitas gives governments the evidence they need before going public."
     capabilities={[
-      { name: "Policy Sequencing", detail: "Test the order and timing of policy rollouts to minimize public resistance and maximize adoption." },
-      { name: "Crisis Response", detail: "Simulate public reaction to crisis communications and intervention strategies before deploying them." },
-      { name: "Regulatory Impact", detail: "Model how proposed regulations affect different stakeholder groups across industries and demographics." },
-      { name: "Public Communications", detail: "Test messaging strategies and communication channels to optimize public understanding and compliance." },
-      { name: "Unreachable Population Modeling", detail: "Simulate responses from populations that traditional surveys cannot access — classified personnel, remote communities, marginalized groups." },
-      { name: "Infrastructure Rollout", detail: "Predict community response to infrastructure projects and identify optimal engagement strategies." },
+      { name: "Policy sequencing", detail: "Model the optimal order to introduce policy changes to reduce public resistance and build stakeholder support." },
+      { name: "Crisis response", detail: "Test which communication approaches reduce public anxiety fastest across different demographic groups during a crisis." },
+      { name: "Regulatory impact", detail: "Simulate how affected industries, businesses, and citizens respond to proposed regulatory changes before they are announced." },
+      { name: "Public communications", detail: "Identify which messaging strategy performs best across geographic, demographic, and psychographic segments." },
+      { name: "Unreachable population modeling", detail: "Simulate groups that are difficult or impossible to survey directly, including rural communities, low-trust populations, and high-net-worth households." },
+      { name: "Infrastructure rollout", detail: "Predict community response to major public projects so that objections can be addressed before implementation begins." },
     ]}
     steps={[
-      "Upload your policy draft, regulatory proposal, or crisis communication plan.",
-      "Presage generates a citizenry matching the affected population's demographics and behavioral patterns.",
-      "Receive a structured report: public sentiment forecast, resistance hotspots, optimal communication strategy.",
+      "Upload your policy draft, communications plan, or crisis scenario.",
+      "Narunas generates a citizen population across relevant demographic and geographic segments and runs the simulation.",
+      "Receive a structured report covering public sentiment, resistance clusters, likely media narratives, and recommended sequencing.",
     ]}
     questions={[
       "How will different income groups respond to this proposed tax reform?",
-      "What communication strategy minimizes public resistance to this infrastructure project?",
-      "How does this regulatory change affect stakeholder sentiment across industry groups?",
-      "What is the projected public reaction if this policy is announced during a crisis?",
+      "Which communication strategy reduces public resistance to this infrastructure project?",
+      "What is the projected public reaction if this policy is announced during a period of economic stress?",
+      "How does this regulatory change affect sentiment across the industry groups most affected?",
     ]}
   />
 );

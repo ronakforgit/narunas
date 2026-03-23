@@ -7,7 +7,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index.tsx";
 import Products from "./pages/Products.tsx";
 import Predictions from "./pages/Predictions.tsx";
-import PredictionReport from "./pages/PredictionReport.tsx";
 import Signal from "./pages/Signal.tsx";
 import Civitas from "./pages/Civitas.tsx";
 import Mandate from "./pages/Mandate.tsx";
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/products" element={<Products />} />
           <Route path="/predictions" element={<Predictions />} />
-          <Route path="/predictions/:slug" element={<PredictionReport />} />
           <Route path="/products/signal" element={<Signal />} />
           <Route path="/products/civitas" element={<Civitas />} />
           <Route path="/products/mandate" element={<Mandate />} />

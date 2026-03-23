@@ -60,7 +60,7 @@ const Products = () => {
           Purpose-built for the decisions that matter most.
         </h1>
         <p className="fade-in-up mt-6 max-w-3xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
-          Every Presage module connects predicted behavior to the decision it informs — so you act on evidence, not instinct.
+          Every Narunas product connects predicted behavior to the decision it informs. You get a recommendation, not a dataset.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
@@ -70,7 +70,6 @@ const Products = () => {
             </div>
           ))}
         </div>
-
       </section>
     </Layout>
   );
