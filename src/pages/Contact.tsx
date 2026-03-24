@@ -21,7 +21,7 @@ const Contact = () => {
     if (!form.email.trim()) e.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
     if (!form.organization.trim()) e.organization = "Organization is required";
-    if (!form.module) e.module = "Please select a product";
+    if (!form.module) e.module = "Please select a domain";
     return e;
   };
 

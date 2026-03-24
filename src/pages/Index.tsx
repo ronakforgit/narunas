@@ -164,10 +164,10 @@ const Index = () => {
       {/* Products */}
       <section ref={modulesRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <span className="fade-in-up font-sans text-xs font-medium uppercase tracking-wider text-primary">
-          PRODUCTS
+          DOMAINS
         </span>
         <h2 className="fade-in-up mt-4 font-serif text-3xl text-foreground sm:text-4xl">
-          Three products. Each built for a different domain.
+          One platform. Three domains.
         </h2>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {modules.map((mod, i) => (
