@@ -14,6 +14,7 @@ const ModuleCard = ({ label, title, description, capabilities, href }: ModuleCar
       {label}
     </span>
     <h3 className="mb-4 font-serif text-2xl text-card-foreground">{title}</h3>
+    <p className="mb-1 text-xs text-muted-foreground/70 italic">Narunas for {label.toLowerCase()}</p>
     <p className="mb-6 text-sm leading-relaxed text-muted-foreground">{description}</p>
     <div className="mb-6 flex flex-wrap gap-2">
       {capabilities.map((cap) => (

@@ -57,10 +57,10 @@ const Products = () => {
     <Layout>
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8" ref={ref}>
         <h1 className="fade-in-up font-serif text-4xl text-foreground sm:text-5xl">
-          Purpose-built for the decisions that matter most.
+          One platform. Three domains.
         </h1>
         <p className="fade-in-up mt-6 max-w-3xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
-          Every Narunas product connects predicted behavior to the decision it informs. You get a recommendation, not a dataset.
+          Narunas applies the same simulation engine to three distinct domains. Each is purpose-built for the decisions that matter most in its field.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">

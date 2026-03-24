@@ -21,7 +21,7 @@ const Contact = () => {
     if (!form.email.trim()) e.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
     if (!form.organization.trim()) e.organization = "Organization is required";
-    if (!form.module) e.module = "Please select a product";
+    if (!form.module) e.module = "Please select a domain";
     return e;
   };
 
@@ -98,9 +98,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Which product are you interested in?</label>
+                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Which domain are you interested in?</label>
                   <select className={inputClass} value={form.module} onChange={(e) => update("module", e.target.value)}>
-                    <option value="">Select a product</option>
+                    <option value="">Select a domain</option>
                     <option value="signal">Signal</option>
                     <option value="civitas">Civitas</option>
                     <option value="mandate">Mandate</option>

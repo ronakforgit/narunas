@@ -67,7 +67,7 @@ const ModuleDetailPage = ({ label, headline, description, capabilities, steps, q
 
       {/* Questions */}
       <section ref={qRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <h2 className="fade-in-up font-serif text-3xl text-foreground">Questions this product can answer</h2>
+        <h2 className="fade-in-up font-serif text-3xl text-foreground">Questions Narunas can answer</h2>
         <div className="mt-12 space-y-4">
           {questions.map((q, i) => (
             <div
