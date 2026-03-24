@@ -3,6 +3,9 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Linkedin } from "lucide-react";
 import founderCeo from "@/assets/founder-ceo.png";
 import founderCto from "@/assets/founder-cto.png";
+import GlowOrb from "@/components/graphics/GlowOrb";
+import DotGrid from "@/components/graphics/DotGrid";
+import FloatingShapes from "@/components/graphics/FloatingShapes";
 
 const teamMembers = [
   { name: "Vedansh Pal", title: "Co-founder & CEO", photo: founderCto, linkedin: "https://www.linkedin.com/in/vedansh1/" },
@@ -18,18 +21,21 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section ref={heroRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <h1 className="fade-in-up font-serif text-4xl text-foreground sm:text-5xl">
+      <section ref={heroRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <GlowOrb className="-top-20 right-0" size="lg" />
+        <DotGrid className="top-12 right-8 opacity-50" />
+        <h1 className="fade-in-up relative font-serif text-4xl text-foreground sm:text-5xl">
           We are rethinking the science of prediction.
         </h1>
-        <p className="fade-in-up mt-6 max-w-3xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
+        <p className="fade-in-up relative mt-6 max-w-3xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
           Narunas was built on a simple premise. The most important decisions are exactly the ones that traditional research cannot answer.
         </p>
       </section>
 
       {/* Mission */}
-      <section ref={missionRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2">
+      <section ref={missionRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <FloatingShapes />
+        <div className="relative grid gap-12 lg:grid-cols-2">
           <h2 className="fade-in-up font-serif text-3xl text-foreground leading-snug">
             Simulating the future is more honest than surveying it.
           </h2>
@@ -40,7 +46,7 @@ const About = () => {
       </section>
 
       {/* Differentiators */}
-      <section ref={diffRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <section ref={diffRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
@@ -65,9 +71,10 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section ref={teamRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <section ref={teamRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <GlowOrb className="bottom-0 left-1/3" size="md" />
         <h2 className="fade-in-up font-serif text-3xl text-foreground">Team</h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-2xl">
+        <div className="relative mt-12 grid gap-8 md:grid-cols-2 max-w-2xl">
           {teamMembers.map((member, i) => (
             <div key={i} className="fade-in-up" style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="aspect-square rounded-lg overflow-hidden border border-border">
