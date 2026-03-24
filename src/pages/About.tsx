@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Linkedin } from "lucide-react";
 import founderCeo from "@/assets/founder-ceo.png";
 import founderCto from "@/assets/founder-cto.png";
 
