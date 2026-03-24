@@ -5,8 +5,8 @@ import founderCeo from "@/assets/founder-ceo.png";
 import founderCto from "@/assets/founder-cto.png";
 
 const teamMembers = [
-  { name: "Vedansh Pal", title: "Co-founder & CEO", photo: founderCeo, linkedin: "https://www.linkedin.com/in/vedansh1/" },
-  { name: "Ronak Patil", title: "Co-founder & CTO", photo: founderCto, linkedin: "https://www.linkedin.com/in/ronakfordevops/" },
+  { name: "Vedansh Pal", title: "Co-founder & CEO", photo: founderCto, linkedin: "https://www.linkedin.com/in/vedansh1/" },
+  { name: "Ronak Patil", title: "Co-founder & CTO", photo: founderCeo, linkedin: "https://www.linkedin.com/in/ronakfordevops/" },
 ];
 
 const About = () => {
