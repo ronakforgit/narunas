@@ -100,7 +100,7 @@ const Contact = () => {
                 <div>
                   <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Which domain are you interested in?</label>
                   <select className={inputClass} value={form.module} onChange={(e) => update("module", e.target.value)}>
-                    <option value="">Select a product</option>
+                    <option value="">Select a domain</option>
                     <option value="signal">Signal</option>
                     <option value="civitas">Civitas</option>
                     <option value="mandate">Mandate</option>
