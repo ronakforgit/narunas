@@ -1,11 +1,12 @@
 import Layout from "@/components/Layout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Linkedin } from "lucide-react";
 import founderCeo from "@/assets/founder-ceo.png";
 import founderCto from "@/assets/founder-cto.png";
 
 const teamMembers = [
-  { name: "Name", title: "Co-founder & CEO", photo: founderCeo },
-  { name: "Name", title: "Co-founder & CTO", photo: founderCto },
+  { name: "Vedansh Pal", title: "Co-founder & CEO", photo: founderCeo, linkedin: "https://www.linkedin.com/in/vedansh1/" },
+  { name: "Ronak Patil", title: "Co-founder & CTO", photo: founderCto, linkedin: "https://www.linkedin.com/in/ronakfordevops/" },
 ];
 
 const About = () => {
@@ -73,7 +74,12 @@ const About = () => {
                 <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
               </div>
               <h3 className="mt-4 font-sans text-sm font-semibold text-foreground">{member.name}</h3>
-              <p className="text-sm text-muted-foreground">{member.title}</p>
+              <div className="flex items-center gap-2">
+                <p className="text-sm text-muted-foreground">{member.title}</p>
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           ))}
         </div>
