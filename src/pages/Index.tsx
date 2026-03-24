@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ModuleCard from "@/components/ModuleCard";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import GlowOrb from "@/components/graphics/GlowOrb";
+import GridPattern from "@/components/graphics/GridPattern";
+import FloatingShapes from "@/components/graphics/FloatingShapes";
+import DotGrid from "@/components/graphics/DotGrid";
+import CrosshairMarker from "@/components/graphics/CrosshairMarker";
 
 const modules = [
   {
@@ -70,16 +75,22 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section ref={heroRef} className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-6 text-center">
-        <h1 className="fade-in-up max-w-4xl font-serif text-4xl font-medium leading-tight text-foreground sm:text-5xl lg:text-6xl">
+      <section ref={heroRef} className="relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-6 text-center overflow-hidden">
+        <GridPattern className="inset-0 h-full w-full" />
+        <GlowOrb className="-top-20 left-1/4" size="lg" />
+        <GlowOrb className="bottom-10 right-1/4" size="md" color="accent" />
+        <CrosshairMarker className="top-32 right-[15%] hidden lg:block" />
+        <CrosshairMarker className="bottom-40 left-[12%] hidden lg:block" />
+
+        <h1 className="fade-in-up relative max-w-4xl font-serif text-4xl font-medium leading-tight text-foreground sm:text-5xl lg:text-6xl">
           Simulate the decision.
           <br />
           Before you make it.
         </h1>
-        <p className="fade-in-up mt-6 max-w-2xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
+        <p className="fade-in-up relative mt-6 max-w-2xl text-lg text-muted-foreground" style={{ transitionDelay: "0.1s" }}>
           Narunas builds digital populations to predict how markets, citizens, and electorates respond to any event before it happens.
         </p>
-        <div className="fade-in-up mt-10 flex flex-wrap items-center justify-center gap-4" style={{ transitionDelay: "0.2s" }}>
+        <div className="fade-in-up relative mt-10 flex flex-wrap items-center justify-center gap-4" style={{ transitionDelay: "0.2s" }}>
           <Link
             to="/contact"
             className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -95,7 +106,7 @@ const Index = () => {
         </div>
 
         {/* Stat bar */}
-        <div className="fade-in-up mt-16 flex flex-col items-center gap-6 border border-border rounded-lg px-8 py-6 sm:flex-row sm:gap-0 sm:divide-x sm:divide-border" style={{ transitionDelay: "0.3s" }}>
+        <div className="fade-in-up relative mt-16 flex flex-col items-center gap-6 border border-border rounded-lg px-8 py-6 sm:flex-row sm:gap-0 sm:divide-x sm:divide-border" style={{ transitionDelay: "0.3s" }}>
           {[
             { num: "1,000,000+", label: "Agents per simulation" },
             { num: "3", label: "Domains: Signal, Civitas, Mandate" },
@@ -110,7 +121,8 @@ const Index = () => {
       </section>
 
       {/* Problem */}
-      <section ref={problemRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      <section ref={problemRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <DotGrid className="top-8 right-0 opacity-60" />
         <h2 className="fade-in-up font-serif text-3xl text-foreground sm:text-4xl">
           Traditional research is broken.
         </h2>
@@ -138,14 +150,16 @@ const Index = () => {
       </section>
 
       {/* How it works */}
-      <section ref={howRef} id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <span className="fade-in-up font-sans text-xs font-medium uppercase tracking-wider text-primary">
+      <section ref={howRef} id="how-it-works" className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <FloatingShapes />
+        <GlowOrb className="-bottom-32 left-1/3" size="lg" />
+        <span className="fade-in-up relative font-sans text-xs font-medium uppercase tracking-wider text-primary">
           HOW IT WORKS
         </span>
-        <h2 className="fade-in-up mt-4 font-serif text-3xl text-foreground sm:text-4xl">
+        <h2 className="fade-in-up relative mt-4 font-serif text-3xl text-foreground sm:text-4xl">
           A living simulation of human behavior.
         </h2>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((step, i) => (
             <div key={step.num} className="fade-in-up" style={{ transitionDelay: `${i * 0.08}s` }}>
               <span className="font-sans text-xs font-medium text-primary">{step.num}</span>
@@ -154,22 +168,24 @@ const Index = () => {
             </div>
           ))}
         </div>
-        <div className="fade-in-up mt-12 border-l-2 border-l-primary bg-primary/5 px-8 py-6" style={{ transitionDelay: "0.4s" }}>
+        <div className="fade-in-up relative mt-12 border-l-2 border-l-primary bg-primary/5 px-8 py-6" style={{ transitionDelay: "0.4s" }}>
           <p className="text-sm text-foreground/90">
             You can introduce new variables at any point during a simulation. A policy reversal, a competitor announcement, a breaking headline. Watch how the population responds in real time.
           </p>
         </div>
       </section>
 
-      {/* Products */}
-      <section ref={modulesRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+      {/* Domains */}
+      <section ref={modulesRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <DotGrid className="bottom-0 left-0 opacity-40" />
+        <CrosshairMarker className="top-16 right-12 hidden lg:block" />
         <span className="fade-in-up font-sans text-xs font-medium uppercase tracking-wider text-primary">
           DOMAINS
         </span>
         <h2 className="fade-in-up mt-4 font-serif text-3xl text-foreground sm:text-4xl">
           One platform. Three domains.
         </h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="relative mt-12 grid gap-8 md:grid-cols-3">
           {modules.map((mod, i) => (
             <div key={mod.title} className="fade-in-up" style={{ transitionDelay: `${i * 0.1}s` }}>
               <ModuleCard {...mod} />
@@ -179,8 +195,9 @@ const Index = () => {
       </section>
 
       {/* Proof */}
-      <section ref={proofRef} className="border-y border-border py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+      <section ref={proofRef} className="relative border-y border-border py-24 overflow-hidden">
+        <GlowOrb className="top-0 left-1/2 -translate-x-1/2" size="lg" />
+        <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
           <blockquote className="fade-in-up font-serif text-2xl leading-relaxed text-foreground sm:text-3xl">
             "In an independent validation study, our simulation recreated a six-month primary research report overnight. Where results diverged, the simulation was more accurate."
           </blockquote>
@@ -194,8 +211,9 @@ const Index = () => {
       </section>
 
       {/* Agent Interview */}
-      <section ref={interviewRef} className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <section ref={interviewRef} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 overflow-hidden">
+        <FloatingShapes className="scale-x-[-1]" />
+        <div className="relative grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <span className="fade-in-up font-sans text-xs font-medium uppercase tracking-wider text-primary">
               AGENT INTERVIEW
@@ -209,7 +227,7 @@ const Index = () => {
           </div>
 
           {/* Mock terminal */}
-          <div className="fade-in-up rounded-lg border border-border bg-card p-6 font-mono text-sm" style={{ transitionDelay: "0.2s" }}>
+          <div className="fade-in-up relative rounded-lg border border-border bg-card p-6 font-mono text-sm" style={{ transitionDelay: "0.2s" }}>
             <div className="mb-4 flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-muted-foreground/30" />
               <div className="h-3 w-3 rounded-full bg-muted-foreground/30" />
