@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
 
   return (
     <footer className="border-t border-border bg-background">
