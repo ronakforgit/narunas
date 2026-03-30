@@ -68,6 +68,12 @@ const Contact = () => {
               <p>We respond within one business day.</p>
               <p>No commitment required.</p>
               <p>Available for enterprise, government, and campaign contracts.</p>
+              <p className="mt-6">
+                Or email us directly at{" "}
+                <a href="mailto:support@narunas.io" className="text-primary hover:underline">
+                  support@narunas.io
+                </a>
+              </p>
             </div>
           </div>
 
