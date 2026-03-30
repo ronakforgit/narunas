@@ -33,6 +33,12 @@ const Contact = () => {
       return;
     }
     setErrors({});
+
+    const subject = encodeURIComponent(`Demo Request – ${form.module} – ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.organization}\nRole: ${form.role}\nDomain: ${form.module}\n\nDecision:\n${form.decision}`
+    );
+    window.open(`mailto:support@narunas.io?subject=${subject}&body=${body}`, "_self");
     setSubmitted(true);
   };
 
