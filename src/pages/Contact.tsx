@@ -33,6 +33,12 @@ const Contact = () => {
       return;
     }
     setErrors({});
+
+    const subject = encodeURIComponent(`Demo Request – ${form.module} – ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.organization}\nRole: ${form.role}\nDomain: ${form.module}\n\nDecision:\n${form.decision}`
+    );
+    window.open(`mailto:support@narunas.io?subject=${subject}&body=${body}`, "_self");
     setSubmitted(true);
   };
 
@@ -62,6 +68,12 @@ const Contact = () => {
               <p>We respond within one business day.</p>
               <p>No commitment required.</p>
               <p>Available for enterprise, government, and campaign contracts.</p>
+              <p className="mt-6">
+                Or email us directly at{" "}
+                <a href="mailto:support@narunas.io" className="text-primary hover:underline">
+                  support@narunas.io
+                </a>
+              </p>
             </div>
           </div>
 

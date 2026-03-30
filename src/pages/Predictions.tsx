@@ -10,6 +10,9 @@ const Predictions = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
+      const subject = encodeURIComponent("Predictions Notification Signup");
+      const body = encodeURIComponent(`Please notify me at: ${email}`);
+      window.open(`mailto:support@narunas.io?subject=${subject}&body=${body}`, "_self");
       setSubmitted(true);
       setEmail("");
     }

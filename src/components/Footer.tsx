@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
 
   return (
     <footer className="border-t border-border bg-background">
@@ -45,30 +43,17 @@ const Footer = () => {
           {/* Col 3 */}
           <div>
             <h4 className="mb-4 font-sans text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              Join our mailing list
+              Contact
             </h4>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setEmail("");
-              }}
-              className="flex gap-2"
+            <a
+              href="mailto:support@narunas.io"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@company.com"
-                className="flex-1 rounded-md border border-border bg-card px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-                required
-              />
-              <button
-                type="submit"
-                className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-              >
-                Subscribe
-              </button>
-            </form>
+              support@narunas.io
+            </a>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Reach out for demos, partnerships, or general inquiries.
+            </p>
           </div>
         </div>
 
